@@ -173,25 +173,25 @@ export default function BlogPage() {
             <Card key={post.id} className="group relative overflow-hidden border-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-500">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="grid lg:grid-cols-2 gap-8 items-center">
-                <div className="relative">
+              <div className="grid lg:grid-cols-2 gap-8 items-center p-8">
+                <div className="relative order-2 lg:order-1">
                   <Image
                     src={post.image}
                     alt={post.title}
                     width={600}
                     height={400}
-                    className="rounded-2xl shadow-xl w-full h-auto"
+                    className="rounded-2xl shadow-xl w-full h-auto object-cover"
                   />
                   <Badge 
                     variant="secondary" 
-                    className={`absolute top-4 left-4 bg-gradient-to-r ${post.bgGradient} dark:${post.darkBgGradient} text-slate-700 dark:text-slate-300 border-0 font-medium`}
+                    className={`absolute top-4 left-4 bg-gradient-to-r ${post.bgGradient} dark:${post.darkBgGradient} text-slate-700 dark:text-slate-300 border-0 font-medium shadow-lg`}
                   >
                     {post.category}
                   </Badge>
                 </div>
                 
-                <div className="p-8 lg:p-0">
-                  <div className="flex items-center space-x-4 mb-4 text-sm text-slate-500 dark:text-slate-400">
+                <div className="order-1 lg:order-2 space-y-6">
+                  <div className="flex items-center space-x-4 text-sm text-slate-500 dark:text-slate-400">
                     <div className="flex items-center space-x-1">
                       <Calendar className="h-4 w-4" />
                       <span>{post.date}</span>
@@ -202,18 +202,18 @@ export default function BlogPage() {
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight">
                     {post.title}
                   </h3>
                   
-                  <p className="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
                     {post.excerpt}
                   </p>
                   
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <div className="flex items-center space-x-3">
-                      <Avatar className="h-10 w-10">
-                        <AvatarFallback className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold">
+                      <Avatar className="h-12 w-12">
+                        <AvatarFallback className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg">
                           {post.authorAvatar}
                         </AvatarFallback>
                       </Avatar>
@@ -226,7 +226,7 @@ export default function BlogPage() {
                     <Button
                       size="lg"
                       asChild
-                      className="group/btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                      className="group/btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 whitespace-nowrap"
                     >
                       <Link href={`/blog/${post.id}`} className="flex items-center">
                         Read Full Article

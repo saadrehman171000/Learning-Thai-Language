@@ -218,13 +218,13 @@ export default function PricingPage() {
               <Card 
                 key={index} 
                 className={`group relative overflow-hidden border-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 ${
-                  plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
+                  plan.popular ? 'ring-2 ring-blue-500' : ''
                 }`}
               >
                 {/* Popular Badge */}
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                    <Badge className="bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0 px-4 py-2 text-sm font-semibold">
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-20">
+                    <Badge className="bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0 px-4 py-2 text-sm font-semibold shadow-lg">
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </Badge>
@@ -233,8 +233,8 @@ export default function PricingPage() {
 
                 {/* Savings Badge */}
                 {plan.savings && (
-                  <div className="absolute -top-4 right-4 z-20">
-                    <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 px-3 py-1 text-xs font-semibold">
+                  <div className="absolute -top-2 right-4 z-20">
+                    <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 px-3 py-1 text-xs font-semibold shadow-lg">
                       {plan.savings}
                     </Badge>
                   </div>
@@ -244,7 +244,7 @@ export default function PricingPage() {
                 <div className={`absolute inset-0 bg-gradient-to-r ${plan.borderGradient} dark:${plan.darkBorderGradient} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 <div className="absolute inset-[2px] bg-white dark:bg-slate-900 rounded-xl" />
                 
-                <CardHeader className="relative z-10 text-center pb-6">
+                <CardHeader className="relative z-10 text-center pb-6 pt-12">
                   <div className="flex items-center justify-center mb-4">
                     {plan.name === "Starter" && <Heart className="h-8 w-8 text-green-500" />}
                     {plan.name === "Pro" && <Crown className="h-8 w-8 text-blue-500" />}
@@ -308,7 +308,7 @@ export default function PricingPage() {
                 </CardContent>
                 
                 {/* Hover Effect Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-xl`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl`} />
               </Card>
             ))}
           </div>
@@ -344,8 +344,8 @@ export default function PricingPage() {
                 className="group border-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
               >
                 <CardContent className="pt-8 text-center">
-                  <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${feature.bgGradient} dark:from-slate-800 dark:to-slate-700 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
-                    <feature.icon className="h-8 w-8 text-slate-700 dark:text-slate-300" />
+                  <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${feature.gradient} dark:from-slate-800 dark:to-slate-700 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
+                    <feature.icon className="h-8 w-8 text-white" />
                   </div>
                   
                   <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-300">
