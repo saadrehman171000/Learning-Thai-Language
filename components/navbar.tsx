@@ -80,13 +80,11 @@ export function Navbar() {
               <Link href="/auth/signin">Login</Link>
             </Button>
             <Button
+              size="sm"
               asChild
-              className="group relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
             >
-              <Link href="/pricing" className="flex items-center">
-                Get Started
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </Link>
+              <Link href="/auth/signup">Get Started</Link>
             </Button>
           </div>
 

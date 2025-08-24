@@ -98,9 +98,8 @@ export default function HomePage() {
                   className="group relative overflow-hidden border-2 border-slate-300 dark:border-slate-600 hover:border-purple-400 dark:hover:border-purple-400 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-slate-700 shadow-lg hover:shadow-purple-500/30 transition-all duration-500 transform hover:-translate-y-1 hover:scale-105 px-8 py-4 text-lg font-semibold text-slate-700 dark:text-slate-200 hover:text-purple-700 dark:hover:text-purple-300"
                 >
                   <Link href="/auth/signup" className="flex items-center">
-                    <Play className="mr-2 h-5 w-5 transition-all duration-300 group-hover:scale-110" />
+                    <Play className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
                     See a Free Demo
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </Link>
                 </Button>
               </div>

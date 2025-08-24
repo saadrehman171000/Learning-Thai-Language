@@ -223,7 +223,7 @@ export default function PricingPage() {
               >
                 {/* Popular Badge */}
                 {plan.popular && (
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-20">
+                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 z-20">
                     <Badge className="bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0 px-4 py-2 text-sm font-semibold shadow-lg">
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
@@ -233,7 +233,7 @@ export default function PricingPage() {
 
                 {/* Savings Badge */}
                 {plan.savings && (
-                  <div className="absolute -top-2 right-4 z-20">
+                  <div className="absolute top-2 right-4 z-20">
                     <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 px-3 py-1 text-xs font-semibold shadow-lg">
                       {plan.savings}
                     </Badge>
