@@ -13,7 +13,7 @@ A beautiful, modern website for learning Thai language with Sarah. Built with Ne
 - **Beautiful gradients** and color schemes
 - **Smooth animations** with Framer Motion
 - **Responsive design** for all devices
-- **Dark/Light mode** support
+- **Dark/Light mode** Support
 - **Glassmorphism effects** and backdrop-blur
 - **Interactive hover states** and micro-animations
 
